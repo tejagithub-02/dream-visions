@@ -1,0 +1,83 @@
+/* src/components/FutureProducts.css */
+.future-products1 {
+    background-color: #ffffff;
+    color: #111;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .future-products1 h2 {
+    color: #00bcd4;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .scroll-container1 {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .product-track1 {
+    display: flex;
+    gap: 24px;
+    animation: scroll-left 35s linear infinite;
+    width: fit-content;
+  }
+  
+  .product-card1 {
+    flex: 0 0 auto;
+    width: 260px;
+    background: #fff;
+    border: 2px solid #00bcd4;
+    border-radius: 16px;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 14px rgba(0, 188, 212, 0.2);
+  }
+  
+  .product-card1 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card1 p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #000;
+  }
+  
+  .product-card1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+  }
+  
+  .product-card1:hover img {
+    transform: scale(1.03);
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .product-card1 {
+      width: 200px;
+    }
+  
+    .product-card1 img {
+      height: 140px;
+    }
+  }
+  
