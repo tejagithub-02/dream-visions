@@ -26,7 +26,7 @@ const Header = () => {
         <div className="logo-box" onClick={() => handleLinkClick('top')}>
           <img src="/images/logo.png" alt="Dream Vision Logo" className={`logo ${loaded ? 'loaded' : ''}`} />
           <span className={`brand-name ${loaded ? 'loaded' : ''}`}>
-            Dream Vision
+            Dream Visions
           </span>
         </div>
 
