@@ -9,8 +9,8 @@ import { FiPhoneCall, FiMenu, FiX } from 'react-icons/fi';
 const fallbackImage = 'https://via.placeholder.com/1920x1080?text=Travel+Banner';
 
 const banners = [
-  { image: banner1 || fallbackImage, tagline: "Explore the world", headline: "Discover new places\nwith us" },
-  { image: banner2 || fallbackImage, tagline: "Adventure Awaits", headline: "Your journey starts\nhere" },
+  { image: banner1 || fallbackImage  },
+  { image: banner2 || fallbackImage},
 ];
 
 const Banner = () => {
