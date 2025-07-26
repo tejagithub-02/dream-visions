@@ -6,6 +6,9 @@ import CategoryCarousel from './components/CategoryCarousel';
 import Products from './components/Products';
 import FutureProducts from './components/FutureProducts';
 import AboutUs from './components/AboutUs';
+import EnquiryForm from './components/EnquiryForm';
+import ContactUs from './components/ContactUs';
+import Testimonial from './components/Testimonial';
 
 function App() {
   return (
@@ -17,6 +20,10 @@ function App() {
    <Products/>
   <FutureProducts/>
   <AboutUs/>
+  <ContactUs/>
+  <EnquiryForm/>
+  
+  <Testimonial/>
    </>
   );
 }

@@ -39,7 +39,7 @@ const stats = [
 
 const AboutUs = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id='about'>
       {/* Left Content */}
       <div className="about-content">
         <motion.div 

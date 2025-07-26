@@ -1,0 +1,147 @@
+.enquiry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.enquiry-form {
+  background: white;
+  padding: 2.5rem;
+  padding-right: 6rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enquiry-form h2 {
+  font-size: 1.8rem;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.textarea-icon {
+  top: 1.5rem;
+  transform: none;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  border-color: #4361ee;
+  background-color: white;
+}
+
+.enquiry-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding-top: 1.5rem;
+}
+
+.enquiry-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  background-color: #128C7E;
+}
+
+
+
+.loading-dots {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.loading-dots span {
+  display: inline-block;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .enquiry-form {
+    padding: 1.5rem;
+  }
+  
+  .enquiry-form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) 
+{
+  .enquiry-form {
+
+    padding-right: 6rem;
+   
+  }
+}

@@ -1,0 +1,130 @@
+/* Fade-in animation */
+@keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .contact-section {
+    position: relative;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f0f4ff, #e0f7fa);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+  }
+  .contact-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .contact-map {
+    height: 100%;
+    min-height: 500px;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
+  }
+  .contact-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-info h2 {
+    font-size: 2.5rem;
+    color: #0077b6;
+    margin-bottom: 2rem;
+  } 
+  .info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  } 
+  .info-card:hover {
+    transform: translateX(5px);
+  } 
+  .info-icon {
+    background: #caf0f8;
+    color: #0077b6;
+    font-size: 1.5rem;
+    min-width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+  .info-card h3 {
+    margin: 0;
+    color: #023e8a;
+    font-size: 1.1rem;
+  } 
+  .info-card p {
+    margin: 0.2rem 0 0;
+    font-size: 0.95rem;
+    color: #333;
+  }  
+  .whatsapp-button {
+    background: #25D366;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }  
+  .whatsapp-button:hover {
+    background: #128C7E;
+  } 
+  .whatsapp-icon {
+    font-size: 1.3rem;
+  } 
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    .contact-map {
+      border-radius: 16px 16px 0 0;
+    } 
+    .contact-info {
+      border-radius: 0 0 16px 16px;
+      padding: 2rem;
+    }
+  }  
+  @media (max-width: 576px) {
+    .contact-info h2 {
+      font-size: 2rem;
+    } 
+    .info-card {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  

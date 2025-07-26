@@ -73,11 +73,11 @@ const products = [
     category: "Gaming"
   },
   {
-    title: "Dyson Airwrap",
+    title: "UPS",
     image: "/images/e11.jpeg",
-    price: "₹45,900",
-    message: "Hi, I'm interested in the Dyson Airwrap",
-    category: "Personal Care"
+    price: "₹40,900",
+    message: "Hi, I'm interested in the UPS",
+    category: "UPS"
   },
   {
     title: "Kindle Paperwhite",
@@ -88,11 +88,11 @@ const products = [
   }
 ];
 
-const whatsappNumber = "919876543210"; // Replace with your WhatsApp number
+const whatsappNumber = "918310099843"; // Replace with your WhatsApp number
 
 const Products = () => {
   return (
-    <div className="products-page">
+    <div className="products-page" id='products'>
       <h2 className="products-heading">Premium Electronic Products</h2>
       <p className="products-subheading">Discover the latest in technology and home appliances</p>
       

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Banner.css';
 import logo from '../assets/logo.png';
-import banner1 from '../assets/b-2.jpg';
-import banner2 from '../assets/b-3.jpg';
+import banner1 from '../assets/b-1.jpg';
+import banner2 from '../assets/b-4.jpg';
 
 import { FiPhoneCall, FiMenu, FiX } from 'react-icons/fi';
 
