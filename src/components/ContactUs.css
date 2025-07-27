@@ -26,7 +26,7 @@
   .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
+    max-width: 1200px; 
     margin: 0 auto;
     gap: 2rem;
     border-radius: 16px;
@@ -127,4 +127,13 @@
       gap: 0.5rem;
     }
   }
+  @media (min-width: 1200px) {
+    .contact-map {
+      min-height: 400px; /* reduce from 500px */
+    }
+  }
+  
+  
+  
+  
   

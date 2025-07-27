@@ -9,6 +9,7 @@ import AboutUs from './components/AboutUs';
 import EnquiryForm from './components/EnquiryForm';
 import ContactUs from './components/ContactUs';
 import Testimonial from './components/Testimonial';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
   <EnquiryForm/>
   
   <Testimonial/>
+  <Footer/>
    </>
   );
 }

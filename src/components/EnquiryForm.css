@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
@@ -77,8 +76,10 @@
 }
 
 .enquiry-form button {
+ 
   width: 100%;
   padding: 1rem;
+  margin-left: 30px;
   background-color: #25D366;
   color: white;
   border: none;
@@ -96,9 +97,6 @@
 .enquiry-form button:hover {
   background-color: #128C7E;
 }
-
-
-
 .loading-dots {
   display: flex;
   gap: 0.2rem;

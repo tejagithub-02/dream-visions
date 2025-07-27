@@ -1,0 +1,221 @@
+.footer {
+  background-color: #e6f1fb; /* Light powder sky blue */
+  color: #000; /* Default text black for readability */
+  padding: 48px 24px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.brand-flex {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  /* No background to keep logo clean and visible */
+}
+
+.footer-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 14px;
+  object-fit: contain;
+  border: none;
+  padding: 0;
+  display: block;
+  filter: none; /* No filters — show logo as is */
+  background: none;
+}
+
+.footer-brand-name {
+  font-weight: 800;
+  font-size: 32px;
+  color: #000; /* Black brand name for max contrast */
+  margin: 0;
+  /* Optional subtle shadow */
+  /* text-shadow: 1px 2px 10px #c0c8d2; */
+}
+
+/* Section headings */
+.footer-heading {
+  font-weight: 700;
+  font-size: 24px;
+  color: #2365c7; /* Bright blue accent */
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Quick links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  color: #000; /* Black links */
+  text-decoration: none;
+  transition: color 0.25s ease;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.footer-links li a:hover,
+.footer-links li a:focus {
+  color: #299be5; /* Lighter blue on hover */
+  border-bottom: 2px solid #299be5;
+}
+
+/* Contact info paragraphs */
+.footer-section p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #111; /* Darker gray for legibility */
+  font-size: 16px;
+}
+
+.footer-section p svg {
+  color: #2365c7; /* Blue icons */
+  min-width: 22px;
+  min-height: 22px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1.5px solid #a3b8d1; /* light steel blue */
+  margin-top: 36px;
+  padding-top: 18px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #111; /* Dark grey text */
+  user-select: none;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+  margin-top: 5px;
+}
+
+.footer-socials a {
+  color: #2365c7;
+  font-size: 28px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus {
+  color: #299be5;
+}
+
+/* Responsive styles */
+
+/* Tablets and below */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+
+  .brand-flex {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 8px 8px; 
+  }
+  .footer-content {
+    gap: 6px;
+  }
+  .footer-section {
+    margin-bottom: 2px; 
+  }
+  .footer-bottom {
+    margin-top: 10px; 
+    padding-top: 10px; 
+    gap: 8px; 
+  }
+  .footer-socials {
+    margin-top: 2px;
+    gap: 12px; 
+  }
+}
+
+.footer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-size: 16px;
+  margin-top: 8px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: #299be5; /* highlight on hover/focus */
+}
+
+.footer-contact-link svg {
+  color: #2365c7; /* icon color */
+  min-width: 22px;
+  min-height: 22px;
+}

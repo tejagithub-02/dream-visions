@@ -51,7 +51,7 @@ const ContactUs = () => {
             <div className="info-icon"><FaPhoneAlt /></div>
             <div>
               <h3>Mobile</h3>
-              <p>+91 96185 91044</p>
+              <p>+91 8310099843</p>
             </div>
           </div>
 
