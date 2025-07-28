@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Banner.css';
 import logo from '../assets/logo.png';
 import desktopBanner1 from '../assets/b-2.jpg';
-import desktopBanner2 from '../assets/b-4.jpg';
+import desktopBanner2 from '../assets/b-5.jpg';
 import mobileBanner1 from '../assets/small-2.jpg';
 import mobileBanner2 from '../assets/small.jpg';
 import { FiPhoneCall, FiMenu, FiX } from 'react-icons/fi';
