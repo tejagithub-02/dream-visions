@@ -48,7 +48,7 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h5 className="section-subtitle">About Dream Vision Electronics</h5>
+          <h5 className="section-subtitle">About Vision Dreams Electronic Products</h5>
           <h1 className="section-title">
             Your <span>One-Stop Shop</span> for Premium Appliances
           </h1>
