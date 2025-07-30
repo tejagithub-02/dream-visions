@@ -24,22 +24,21 @@ const Footer = () => {
 
         <div className="footer-section">
   <h4 className="footer-heading">Contact</h4>
+  
   <address>
-    Vision Dreams, near Koramangala Bangalore<br />
-    Your Address Line,<br />
-    City, State - ZIP
+    Head Office: 
+    #34 Srigandanagara, 2nd Cross,<br />
+    Hegganahalli, Bangalore - 560091.
   </address>
-  <a href="mailto:yourbrand@example.com" className="footer-contact-link">
-    <FaEnvelope aria-hidden="true" /> yourbrand@example.com
+  <a href="visiondreams2025@gmail.com" className="footer-contact-link">
+    <FaEnvelope aria-hidden="true" />visiondreams2025@gmail.com
   </a>
   <a href="tel:+918310099843" className="footer-contact-link">
     <FaPhoneAlt aria-hidden="true" /> +91 8310099843
   </a>
 </div>
-
-      </div>
-
-      <div className="footer-bottom">
+ </div>
+ <div className="footer-bottom">
         <p>Designed by <strong>Bloom IT Solutions</strong></p>
         <div className="footer-socials">
   <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>

@@ -1,12 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './ContactUs.css';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGlobe,
+} from 'react-icons/fa';
 
 const ContactUs = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  // IntersectionObserver for fade-in
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
@@ -20,58 +24,64 @@ const ContactUs = () => {
     <section
       className={`contact-section ${isVisible ? 'fade-in' : ''}`}
       ref={sectionRef}
-      id='contact'
+      id="contact"
     >
       <div className="contact-container">
-        {/* Map */}
+        <div className="contact-info">
+          <h2 className="contact-title">CONTACT US</h2>
+
+          <div className="info-group">
+            <p>
+              <FaEnvelope className="icon" />
+              <strong>Gmail:</strong>{' '}
+              <a
+                href="mailto:visiondreams2025@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                visiondreams2025@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <FaPhoneAlt className="icon" />
+              <strong>Mobile:</strong>{' '}
+              <a href="tel:+918310099843">+91 8310099843</a>
+            </p>
+
+            <p>
+              <FaGlobe className="icon" />
+              <strong>Web:</strong>{' '}
+              <a
+                href="https://www.visiondreams.in"
+                target="_blank"
+                rel="noreferrer"
+              >
+                www.visiondreams.in
+              </a>
+            </p>
+          </div>
+
+          <div className="info-group address">
+          <p className="address-block">
+  <FaMapMarkerAlt className="icon" />
+  <span className="office-label">HEAD OFFICE:</span>
+  <span className="address-text">
+    #34 Srigandanagara, 2<sup>nd</sup> Cross,<br />
+    Hegganahalli, Bangalore - 560091
+  </span>
+</p>
+
+          </div>
+        </div>
+
         <div className="contact-map">
           <iframe
             title="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.083408062729!2d78.45145101487722!3d17.44775370598507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91561bb2ef8d%3A0xa10886bcfcb1c7!2sAmeerpet%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1629970454094!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            allowFullScreen=""
+            src="https://www.google.com/maps?q=34+Srigandanagara,+2nd+Cross+Hegganahalli,+Bangalore+-+560091&output=embed"
+            allowFullScreen
             loading="lazy"
           ></iframe>
-        </div>
-
-        {/* Contact Info */}
-        <div className="contact-info">
-          <h2>Get in Touch</h2>
-
-          <div className="info-card">
-            <div className="info-icon"><FaMapMarkerAlt /></div>
-            <div>
-              <h3>Address</h3>
-              <p>Ameerpet, Hyderabad, Telangana</p>
-            </div>
-          </div>
-
-          <div className="info-card">
-            <div className="info-icon"><FaPhoneAlt /></div>
-            <div>
-              <h3>Mobile</h3>
-              <p>+91 8310099843</p>
-            </div>
-          </div>
-
-          <div className="info-card">
-            <div className="info-icon"><FaEnvelope /></div>
-            <div>
-              <h3>Email</h3>
-              <p>tmaruthiteja2013@gmail.com</p>
-            </div>
-          </div>
-
-          <a
-            href="https://wa.me/918310099843"
-            className="whatsapp-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp className="whatsapp-icon" />
-            Chat on WhatsApp
-          </a>
         </div>
       </div>
     </section>

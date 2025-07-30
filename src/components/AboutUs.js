@@ -1,152 +1,88 @@
 import React from 'react';
 import './AboutUs.css';
 import { motion } from 'framer-motion';
-import { FaTv, FaMobileAlt, FaSnowflake, FaFan, FaWifi } from 'react-icons/fa';
 
-const categories = [
-  {
-    icon: <FaTv className="category-icon" />,
-    name: "Smart TVs",
-    count: "50+ Models"
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.25,
+      delayChildren: 0.2,
+    },
   },
-  {
-    icon: <FaMobileAlt className="category-icon" />,
-    name: "Mobiles",
-    count: "100+ Brands"
-  },
-  {
-    icon: <FaSnowflake className="category-icon" />,
-    name: "Refrigerators",
-    count: "30+ Variants"
-  },
-  {
-    icon: <FaFan className="category-icon" />,
-    name: "Air Conditioners",
-    count: "40+ Options"
-  },
-  {
-    icon: <FaWifi className="category-icon" />,
-    name: "Smart Home",
-    count: "IoT Devices"
-  }
-];
+};
 
-const stats = [
-  { value: "10,000+", label: "Happy Customers" },
-  { value: "50+", label: "Brand Partnerships" },
-  { value: "24/7", label: "Support" }
-];
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+};
 
 const AboutUs = () => {
   return (
-    <section className="about-section" id='about'>
-      {/* Left Content */}
-      <div className="about-content">
-        <motion.div 
-          className="about-header"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h5 className="section-subtitle">About Vision Dreams Electronic Products</h5>
-          <h1 className="section-title">
-            Your <span>One-Stop Shop</span> for Premium Appliances
-          </h1>
+    <section className="about-section" id="about">
+      <motion.div
+        className="about-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* === ABOUT US === */}
+        <motion.div className="about-header" variants={itemVariants}>
+          <h1 className="section-title">ABOUT US</h1>
           <p className="section-description">
-            From cutting-edge 4K TVs to energy-efficient refrigerators and the latest smartphones, 
-            we bring you the best in home electronics with unbeatable prices and service.
+            Welcome to Vision Dream Electrical and Electronic. At Vision Dream, we're passionate about harnessing the power of electricity and electronics to transform lives. Our team of experts is dedicated to providing innovative, reliable, and high-quality solutions that meet the evolving needs of our customers.
+            <br /><br />
+            Whether you're looking for a reliable partner for your electrical and electronic needs or a career opportunity with a dynamic team, we'd love to hear from you. Let's work together to create a brighter future!
           </p>
         </motion.div>
 
-        {/* Product Categories */}
-        <motion.div 
-          className="category-grid"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          {categories.map((category, index) => (
-            <motion.div 
-              key={index}
-              className="category-card"
-              whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="category-icon-container">
-                {category.icon}
-              </div>
-              <h3>{category.name}</h3>
-              <p>{category.count}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Stats */}
-        <div className="stats-container">
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={index}
-              className="stat-card"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 + index * 0.1 }}
-            >
-              <h2>{stat.value}</h2>
-              <p>{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Right Visuals */}
-      <motion.div 
-        className="about-visuals"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.2 }}
-      >
-        <div className="main-visual">
-          <img 
-            src="/images/about.jpeg" 
-            alt="Electronics Collection" 
-            className="visual-image"
-          />
-          <motion.div 
-            className="floating-tv"
-            animate={{
-              y: [0, -15, 0],
-              rotate: [0, 2, -2, 0]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <img src="/images/tv-icon.png" alt="TV" />
+        {/* Two-column blocks: Vision, Mission, What We Do */}
+        <div className="about-grid">
+          <motion.div className="about-block" variants={itemVariants}>
+            <h2 className="section-subtitle">VISION</h2>
+            <p className="section-description">
+              Our vision is to be a leading provider of electrical and electronic solutions, recognized for our technical expertise, customer-centric approach, and commitment to innovation, quality, and sustainability, empowering a brighter future for our customers, employees, and community.
+            </p>
           </motion.div>
-          <motion.div 
-            className="floating-phone"
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, -5, 0]
-            }}
-            transition={{
-              duration: 7,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.3
-            }}
-          >
-            <img src="/images/phone-icon.png" alt="Phone" />
+
+          <motion.div className="about-block" variants={itemVariants}>
+            <h2 className="section-subtitle">MISSION</h2>
+            <p className="section-description">
+              At Vision Dream Electrical and Electronic, our mission is to provide innovative, reliable, and high-quality electrical and electronic solutions that exceed customer expectations, while fostering a culture of excellence, sustainability, and continuous improvement.
+            </p>
           </motion.div>
+
+          <motion.div className="about-block" variants={itemVariants}>
+  <h2 className="section-subtitle">WHAT WE DO</h2>
+  <p className="section-description">
+    At Vision Dream Electrical and Electronic, we provide innovative and reliable electrical and electronic solutions tailored to empower individuals and organizations, helping them achieve their goals through expert consulting, strategic planning, and creative problem solving.
+  </p>
+</motion.div>
+
         </div>
       </motion.div>
 
-      {/* Background Elements */}
+      {/* BG shapes */}
       <div className="bg-shapes">
         <div className="shape-1"></div>
         <div className="shape-2"></div>
+        <div className="shape-3"></div>
       </div>
     </section>
   );
