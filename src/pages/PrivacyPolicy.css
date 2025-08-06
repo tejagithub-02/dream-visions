@@ -1,0 +1,125 @@
+/* PrivacyPolicy.css */
+
+.privacy-policy {
+    font-family: 'Segoe UI', sans-serif;
+    color: #2c3e50;
+    background-color: #fff;
+    
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  .privacy-header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    padding: 2.5rem 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e0e0e0;
+  }
+  
+  .privacy-content {
+    padding: 2rem 0;
+  }
+  
+  .policy-section {
+    margin-bottom: 2.5rem;
+    border-left: 4px solid #2c5364;
+    padding-left: 15px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
+  
+  .policy-section h2 {
+    font-size: 1.6rem;
+    color: #0f2027;
+    margin-bottom: 1rem;
+  }
+  
+  .policy-section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    line-height: 1.7;
+  }
+  
+  .company-address {
+    font-style: normal;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-left: 4px solid #0f2027;
+    border-radius: 4px;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .data-list,
+  .exchange-list,
+  .usage-list {
+    padding-left: 1.5rem;
+  }
+  
+  .data-list li,
+  .exchange-list li,
+  .usage-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .nested-list {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .contact-details-section {
+    background-color: #eaf4ff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #cfe2f3;
+  }
+  
+  .contact-details-section h2 {
+    color: #0f2027;
+    margin-bottom: 1rem;
+  }
+  
+  .bottom-spacer {
+    height: 80px;
+  }
+  

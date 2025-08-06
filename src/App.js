@@ -1,32 +1,35 @@
-import React from 'react';
-import Preloader from './components/Preloader';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-import Banner from './components/Banner';
-import CategoryCarousel from './components/CategoryCarousel';
-import Products from './components/Products';
-import FutureProducts from './components/FutureProducts';
-import AboutUs from './components/AboutUs';
-import EnquiryForm from './components/EnquiryForm';
-import ContactUs from './components/ContactUs';
-import Testimonial from './components/Testimonial';
-import Footer from './components/Footer';
+// Import pages
+import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+
+// Import components
+import Preloader from "./components/Preloader";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  return (
-   <>
-   <Preloader/>
+  const [loading, setLoading] = useState(true);
 
-   <Banner/>
-   <CategoryCarousel/>
-   <Products/>
-  <FutureProducts/>
-  <AboutUs/>
-  <ContactUs/>
-  <EnquiryForm/>
-  
-  <Testimonial/>
-  <Footer/>
-   </>
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Preloader />;
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="*" element={<div>Page not found</div>} />
+      </Routes>
+    </Router>
   );
 }
 
