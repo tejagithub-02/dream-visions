@@ -1,0 +1,50 @@
+.terms-conditions {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding-bottom: 40px;
+  }
+  
+  .terms-header {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+  
+  .terms-header .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .terms-header h1 {
+    margin-bottom: 10px;
+  }
+  
+  .terms-header .intro {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .terms-content h2 {
+    margin-top: 24px;
+    color: #222;
+  }
+  
+  .terms-section p,
+  .terms-section address {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-top: 8px;
+    color: #444;
+  }
+  
+  .bottom-spacer {
+    height: 40px;
+  }
+  
